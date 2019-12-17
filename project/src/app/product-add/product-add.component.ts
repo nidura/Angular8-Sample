@@ -7,7 +7,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./product-add.component.css']
 })
 export class ProductAddComponent implements OnInit {
-
+  val: string = '';
   angForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
