@@ -7,16 +7,30 @@ import { ProductGetComponent } from './product-get/product-get.component';
 
 const routes: Routes = [
   {
-    path: 'product/create',  
+    path: 'product/create',
     component: ProductAddComponent
   },
+  // pass router parameter
   {
     path: 'edit/:id',
     component: ProductEditComponent
   },
+  //pass data list from router
   {
     path: 'products',
-    component: ProductGetComponent
+    component: ProductGetComponent,
+    data: { title: 'data List' }
+  }
+  //redirect to home page
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  //route to page not found
+  {
+    path: '**',
+    component: PageNotFoundComponent
   }
 ];
 
